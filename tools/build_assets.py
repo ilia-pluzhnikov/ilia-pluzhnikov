@@ -8,10 +8,11 @@ CSS animations, but it loads no fonts, scripts or outside files. So every
 line of text here is turned into glyph outlines, and each SVG carries
 everything it needs inside itself.
 
+    pip install -r tools/requirements.txt
     python tools/build_assets.py
 
-Needs fontTools, uharfbuzz and Pillow. Fonts: Space Grotesk and JetBrains
-Mono, both under the SIL Open Font License (see tools/fonts/).
+Fonts: Space Grotesk and JetBrains Mono, both under the SIL Open Font
+License (see tools/fonts/).
 """
 from __future__ import annotations
 

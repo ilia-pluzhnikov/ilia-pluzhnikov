@@ -14,11 +14,12 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      # Actions pinned to commits: a tag can be moved, a commit hash cannot.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: "3.13"
-      - run: pip install fonttools uharfbuzz pillow
+      - run: pip install -r tools/requirements.txt
       - run: python tools/build_assets.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

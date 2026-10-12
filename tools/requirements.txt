@@ -1,0 +1,5 @@
+# Pinned so the daily rebuild is byte-for-byte reproducible
+# and never pulls a package released minutes ago.
+fonttools==4.62.1
+uharfbuzz==0.56.3
+pillow==12.0.0
